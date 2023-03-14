@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    Movies Page
+{% endblock %}
+
+{% block body %}
+    {% if title %}
+        <p> {{ author }}, Hello {{ title }}</p>
+    {% else %}
+        <p>Whoops Something went wrong</p>
+    {% endif %}
+
+    {% for movie in movies %}
+        <li>{{ movie }}</li>
+    {% endfor %}
+{% endblock %}
